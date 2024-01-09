@@ -1,4 +1,22 @@
 footer {
     background-color: black;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 209px;
+}
+
+img{
+    margin-top: 4%;
+    margin-bottom: 2%;
+    display: block;
+    height: auto;
+}
+
+h2 {
+padding-top: 1em;
+font-size: 1.2em;
+letter-spacing: 0.2em;
+word-spacing: 0.8em;
 }
