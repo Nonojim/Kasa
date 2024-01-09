@@ -1,5 +1,5 @@
-import '../../utils/style/Home.scss';
-import ImgBanniere from '../../assets/ImageBanniere.jpg';
+import '../utils/style/Home.scss';
+import ImgBanniere from '../assets/ImageBanniere.jpg';
 
 function Home() {
   return (
