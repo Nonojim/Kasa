@@ -1,7 +1,13 @@
+.body{
+    width: 86%;
+}
+
 .Banner {
     position: relative;
     text-align: center;
-    overflow: hidden;
+    height: 219px;
+    border-radius: 25px;
+    margin-bottom: 50px;
 }
 
 .ImgBanner {
@@ -9,29 +15,35 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
-  
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 2;
-    }
+    border-radius: 25px;
 }
   
-.TitleBanner{
+
+
+  
+.TitleBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    inset: 0;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    font-size: 2.5em;
-    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 2.6em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    border-radius: 25px;
 }
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px; 
+    justify-content: center;
+}
+  
+.gallery > * {
+    flex: 0 1 calc(33.33% - 62px); 
+}
+  

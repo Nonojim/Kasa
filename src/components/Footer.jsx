@@ -1,3 +1,4 @@
+import React from 'react';
 import FooterKasaLogo from '../assets/FooterLogo.png';
 import '../utils/style/Footer.scss';
 
