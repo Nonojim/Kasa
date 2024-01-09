@@ -1,0 +1,27 @@
+@import 'variables';
+
+.dropdown-header {
+  display: flex;
+  width: 71%;
+  margin-left: 14.5%;
+  justify-content: space-between;
+  cursor: pointer;
+  color: white;
+  background-color: $primary-color;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.Apropos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.dropdown-content {
+  color: $primary-color;
+  width: 70%;
+  margin-top: 1%;
+  margin-left: 15%;
+}

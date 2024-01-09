@@ -1,0 +1,29 @@
+.Banner {
+  position: relative;
+  text-align: center;
+  height: 219px;
+  border-radius: 25px;
+  margin-bottom: 50px;
+}
+
+.ImgBanner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 25px;
+}
+
+.TitleBanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 2.6em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  border-radius: 25px;
+}

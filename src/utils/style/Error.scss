@@ -1,0 +1,19 @@
+@import 'variables';
+
+.ErrorBody_ h1 {
+  color: $primary-color;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.ErrorBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ErrorBody_ a {
+  margin-bottom: 10%;
+  text-decoration: underline;
+}

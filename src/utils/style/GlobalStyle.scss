@@ -1,3 +1,5 @@
+@import 'variables';
+
 * {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -13,3 +15,7 @@ body {
   text-decoration: underline !important;
 }
 
+.body {
+  width: 86%;
+  margin-left: 7%;
+}

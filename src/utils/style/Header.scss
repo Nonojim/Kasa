@@ -1,15 +1,16 @@
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 86%;
-    margin-top: 45px;
-    margin-bottom: 45px;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 86%;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  margin-left: 7%;
 }
 
-nav{
-    width: 25%;
-    display: flex;
-    justify-content: flex-end;
-    gap: 18%;
+nav {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 18%;
 }
