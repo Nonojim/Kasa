@@ -1,4 +1,4 @@
-import DropdownMenu from './DropdownMenu';
+import DropdownMenu from '../DropdownMenu/DropdownMenu';
 
 const FicheLogement = ({title, location, cover, description, tags, equipments, host, rating}) => {
   return (

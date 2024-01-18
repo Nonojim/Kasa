@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import '../utils/style/DropdownMenu.scss';
+import '../DropdownMenu/DropdownMenu.scss';
 
 const DropdownMenu = ({title, content}) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -9,12 +9,14 @@ const DropdownMenu = ({title, content}) => {
   };
 
   return (
-    <div className="dropdown-container">
+    <div className={`dropdown-container ${isDropdownOpen ? 'open' : 'closed'}`}>
       <div className="dropdown-header" onClick={toggleDropdown}>
         <span>{title}</span>
         <div className={`arrow ${isDropdownOpen ? 'open' : ''}`}>&#9650;</div>
       </div>
-      {isDropdownOpen && <p className="dropdown-content">{content}</p>}
+      {isDropdownOpen && (
+        <p className={`dropdown-content ${isDropdownOpen ? 'open' : ''}`}>{content}</p>
+      )}
     </div>
   );
 };

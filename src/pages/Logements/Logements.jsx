@@ -1,10 +1,11 @@
 import React from 'react';
-import FicheLogement from '../components/FicheLogement';
+import FicheLogement from '../../components/FicheLogement/FicheLogement';
 import {useParams} from 'react-router';
-import LogementList from '../data/logements.json';
+import LogementList from '../../data/logements.json';
 
 const Logements = () => {
-  const {id} = useParams();
+  const params = useParams();
+  const id = params.id;
   const logement = LogementList.find(logement => logement.id === id);
 
   return <FicheLogement {...logement} />;

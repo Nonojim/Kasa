@@ -1,7 +1,7 @@
-import KasaLogo from '../assets/Logo.png';
-import '../utils/style/Header.scss';
+import KasaLogo from '../../assets/Logo.png';
+import './Header.scss';
 import {Link, NavLink} from 'react-router-dom';
-import {StyledNavLink} from '../utils/style/Atoms';
+import {StyledNavLink} from '../../utils/style/Atoms';
 
 function Header() {
   return (

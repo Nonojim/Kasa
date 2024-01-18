@@ -1,7 +1,7 @@
-import Banner from '../components/Banner';
-import AproposImg from '../assets/AproposImg.jpg';
-import DropdownMenu from '../components/DropdownMenu';
-import '../utils/style/Apropos.scss';
+import Banner from '../../components/Banner/Banner';
+import AproposImg from '../../assets/AproposImg.jpg';
+import DropdownMenu from '../../components/DropdownMenu/DropdownMenu';
+import '../Apropos/Apropos.scss';
 
 function Apropos() {
   return (

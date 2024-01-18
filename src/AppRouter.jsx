@@ -1,9 +1,9 @@
 import React from 'react';
-import {Routes, Route, useParams} from 'react-router-dom';
-import Home from './pages/Home';
-import Apropos from './pages/Apropos';
-import Logements from './pages/Logements';
-import Error from './pages/Error';
+import {Routes, Route} from 'react-router-dom';
+import Home from './pages/Home/Home';
+import Apropos from './pages/Apropos/Apropos';
+import Logements from './pages/Logements/Logements';
+import Error from './pages/Error/Error';
 
 const AppRouter = () => {
   return (

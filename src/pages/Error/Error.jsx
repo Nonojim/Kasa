@@ -1,6 +1,6 @@
-import ErrorPng from '../assets/404.png';
-import {StyledNavLink} from '../utils/style/Atoms';
-import '../utils/style/Error.scss';
+import ErrorPng from '../../assets/404.png';
+import {StyledNavLink} from '../../utils/style/Atoms';
+import '../Error/Error.scss';
 
 function Error() {
   return (
