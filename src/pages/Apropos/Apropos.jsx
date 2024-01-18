@@ -5,7 +5,7 @@ import '../Apropos/Apropos.scss';
 
 function Apropos() {
   return (
-    <div className="body Apropos">
+    <div className="main Apropos">
       <Banner cover={AproposImg} />
       <DropdownMenu
         title={'Fiabilité'}

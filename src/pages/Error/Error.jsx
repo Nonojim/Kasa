@@ -4,7 +4,7 @@ import '../Error/Error.scss';
 
 function Error() {
   return (
-    <div className="ErrorBody">
+    <div className="ErrorMain">
       <img src={ErrorPng} />
       <h1>Oups! La page que vous demandez n'existe pas.</h1>
       <StyledNavLink to="/">Retourner sur la page d’accueil</StyledNavLink>

@@ -1,18 +1,29 @@
 import '../Home/Home.scss';
 import ImgBanniere from '../../assets/ImageBanniere.jpg';
 import Card from '../../components/Card/Card';
-import LogementList from '../../data/logements.json';
 import Banner from '../../components/Banner/Banner';
+import {useFetch} from '../../hooks/hooks';
+import {Loader} from '../../utils/style/Atoms';
 
 function Home() {
+  const {data, isLoading, error} = useFetch('/data/logements.json'); //remplacer par adresse API
+  const LogementList = data;
+  if (error) {
+    return <span>Un problème est survenu</span>;
+  }
+
   return (
-    <div className="body">
+    <div className="main">
       <Banner cover={ImgBanniere} titre={'Chez vous, et partout et ailleurs'} />
-      <div className="gallery">
-        {LogementList.map(logement => (
-          <Card key={logement.id} {...logement} />
-        ))}
-      </div>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <div className="gallery">
+          {LogementList?.map(logement => (
+            <Card key={logement.id} {...logement} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
