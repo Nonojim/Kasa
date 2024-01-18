@@ -1,11 +1,13 @@
+@import '../../utils/style/variables';
+
 .dropdown-header {
   display: flex;
   width: 71%;
   margin-left: 14.5%;
   justify-content: space-between;
   cursor: pointer;
-  color: white;
-  background-color: #ff6060;
+  color: $secondary-color;
+  background-color: $primary-color;
   font-size: 24px;
   font-weight: 500;
 }
@@ -18,7 +20,7 @@
 }
 
 .dropdown-content {
-  color: #ff6060;
+  color: $primary-color;
   width: 70%;
   margin-top: 1%;
   margin-left: 15%;
