@@ -1,25 +1,14 @@
-import {useState, useEffect} from 'react';
+import useAsync from './useAsync';
 
-export function useFetch(url) {
-  const [data, setData] = useState({});
-  const [isLoading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+const DEFAULT_OPTIONS = {
+  headers: {'Content-Type': 'application/json'},
+};
 
-  useEffect(() => {
-    if (!url) return;
-    setLoading(true);
-    async function fetchData() {
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
-        setData(data);
-      } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchData();
-  }, [url]);
-  return {isLoading, data, error};
+export function useFetch(url, options = {}, dependencies = []) {
+  return useAsync(() => {
+    return fetch(url, {...DEFAULT_OPTIONS, ...options}).then(res => {
+      if (res.ok) return res.json();
+      return res.json().then(json => Promise.reject(json));
+    });
+  }, dependencies);
 }

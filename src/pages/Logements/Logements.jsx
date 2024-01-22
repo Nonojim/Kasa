@@ -1,18 +1,25 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import FicheLogement from '../../components/FicheLogement/FicheLogement';
 import {useParams} from 'react-router';
 import {Loader} from '../../utils/style/Atoms';
 import {useFetch} from '../../hooks/useFetch';
-import LogementList from '../../logements.json';
+//import LogementList from '../../logements.json';
 
 const Logements = () => {
-  /*const {data, isLoading, error} = useFetch('/data/logements.json'); //remplacer par adresse API
-  const LogementList = data;*/
-  const params = useParams();
-  const id = params.id;
-  const logement = LogementList.find(logement => logement.id === id);
+  const {id} = useParams();
+  const {value, loading, error} = useFetch('/data/logements.json', {}, []); //remplacer par adresse API
+  const logementList = value;
+  console.log(logementList);
 
-  return <FicheLogement {...logement} />;
+  return !error ? (
+    loading ? (
+      <Loader />
+    ) : (
+      <FicheLogement {...logementList.find(logement => logement.id === id)} />
+    )
+  ) : (
+    <span>Un problème est survenu</span>
+  );
 };
 
 export default Logements;

@@ -2,7 +2,7 @@ import DropdownMenu from '../DropdownMenu/DropdownMenu';
 
 const FicheLogement = ({title, location, cover, description, tags, equipments, host, rating}) => {
   return (
-    <div>
+    <>
       <img loading="lazy" src={cover} alt={description} />
       <div>
         <h1>{title}</h1>
@@ -19,7 +19,7 @@ const FicheLogement = ({title, location, cover, description, tags, equipments, h
       </div>
       <DropdownMenu title={'Description'} content={description} />
       <DropdownMenu title={'Équipements'} content={equipments} />
-    </div>
+    </>
   );
 };
 
