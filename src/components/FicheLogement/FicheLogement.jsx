@@ -1,9 +1,22 @@
+import './FicheLogement.scss';
+import ImageSlider from '../ImageSlider/ImageSlider';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
 
-const FicheLogement = ({title, location, cover, description, tags, equipments, host, rating}) => {
+const FicheLogement = ({
+  title,
+  location,
+  pictures,
+  description,
+  tags,
+  equipments,
+  host,
+  rating,
+}) => {
   return (
     <>
-      <img loading="lazy" src={cover} alt={description} />
+      <div className="SliderWrapper">
+        <ImageSlider imageUrls={pictures} />
+      </div>
       <div>
         <h1>{title}</h1>
         <h2>{location}</h2>

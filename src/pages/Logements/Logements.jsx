@@ -3,7 +3,6 @@ import FicheLogement from '../../components/FicheLogement/FicheLogement';
 import {useParams} from 'react-router';
 import {Loader} from '../../utils/style/Atoms';
 import {useFetch} from '../../hooks/useFetch';
-//import LogementList from '../../logements.json';
 
 const Logements = () => {
   const {id} = useParams();
