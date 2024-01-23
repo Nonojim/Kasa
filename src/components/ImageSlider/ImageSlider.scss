@@ -4,10 +4,17 @@
   box-sizing: border-box;
 }
 
-.ImageSlider {
+.img-slider {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+.img-slider-imgcontainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .img-slider-img {
@@ -15,6 +22,9 @@
   width: 100%;
   height: 100%;
   display: block;
+  flex-shrink: 0;
+  flex-grow: 0;
+  transition: translate 300ms ease-in-out;
 }
 
 .img-slider-btn {
@@ -30,11 +40,55 @@
   transition: background-color 200ms ease-in-out;
 }
 
-.img-slider-btn:hover {
+.img-slider-btn:hover,
+.img-slider-btn:focus-visible {
   background-color: rgb(0, 0, 0, 0.2);
 }
 
 .img-slider-btn > * {
   font-size: 80px;
   color: white;
+}
+
+.img-slider-btn:hover > *,
+.img-slider-btn:focus-visible > * {
+  animation: squish 200ms ease-in-out;
+}
+
+@keyframes squish {
+  50% {
+    scale: 1.4 0.6;
+  }
+}
+
+.img-slider-bottombar {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  translate: -50%;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.img-slider-bottombar-btn {
+  all: unset;
+  height: 1rem;
+  display: block;
+  cursor: pointer;
+  transition: scale 100ms ease-in-out;
+}
+
+.img-slider-bottombar-btn:hover,
+.img-slider-bottombar-btn:focus-visible {
+  scale: 1.2;
+}
+
+.img-slider-bottombar-btn > * {
+  color: white;
+  font-size: 18px;
+}
+
+.img-slider-btn:focus-visible,
+.img-slider-bottombar-btn:focus-visible {
+  outline: auto;
 }
