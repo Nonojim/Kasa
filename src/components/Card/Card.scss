@@ -5,6 +5,11 @@
   position: relative;
   height: 350px;
   border-radius: 10px;
+  transition: transform 200ms ease-in-out;
+}
+
+.gallery_card:hover {
+  transform: scale(1.1);
 }
 
 .gallery_card img {

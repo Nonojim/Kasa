@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import FicheLogement from '../../components/FicheLogement/FicheLogement';
 import {useParams} from 'react-router';
 import {Loader} from '../../utils/style/Atoms';

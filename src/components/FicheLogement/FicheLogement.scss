@@ -1,6 +1,69 @@
+@import '../../utils/style/variables';
+
+.logementMain {
+  width: 86%;
+  margin-left: 7%;
+  margin-right: 7%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  color: $primary-color;
+}
+
 .SliderWrapper {
   max-width: 1240px;
   width: 100%;
   aspect-ratio: 248/83; //replace by 3/1 if you hate big numbers
   margin: 0 auto;
 }
+
+.logementTitle {
+  width: 80%;
+}
+
+.host {
+  width: 20%;
+  text-align: right;
+}
+
+.host-picture {
+  border-radius: 50%;
+  width: 30%;
+}
+
+.tags-ratings {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tags {
+  width: 50%;
+  display: flex;
+  gap: 5%;
+}
+
+.tag {
+  display: flex;
+  color: $secondary-color;
+  background-color: $primary-color;
+  border-radius: 10px;
+  font-size: 14px;
+  align-items: center;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.ratings {
+  width: 50%;
+}
+
+/*.Description,
+.Équipements {
+  width: 47%;
+  .dropdown-header {
+    width: 100%;
+    margin: 0;
+  }
+}*/

@@ -13,26 +13,32 @@ const FicheLogement = ({
   rating,
 }) => {
   return (
-    <>
+    <div className="logementMain">
       <div className="SliderWrapper">
         <ImageSlider imageUrls={pictures} />
       </div>
-      <div>
+      <div className="logementTitle">
         <h1>{title}</h1>
         <h2>{location}</h2>
       </div>
-      <div>
-        {host.name} <img src={host.picture} />
+      <div className="host">
+        {host.name} <img className="host-picture" src={host.picture} />
       </div>
-      <div>
-        <div>{tags}</div>
-        <div>
+      <div className="tags-ratings">
+        <div className="tags">
+          {tags.map((tag, index) => (
+            <span className="tag" key={index}>
+              {tag}
+            </span>
+          ))}
+        </div>
+        <div className="rating">
           <span>{rating}⭐</span>
         </div>
       </div>
       <DropdownMenu title={'Description'} content={description} />
       <DropdownMenu title={'Équipements'} content={equipments} />
-    </>
+    </div>
   );
 };
 
