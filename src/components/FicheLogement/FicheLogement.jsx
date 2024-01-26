@@ -1,6 +1,7 @@
 import './FicheLogement.scss';
 import ImageSlider from '../ImageSlider/ImageSlider';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
+import {StarRating} from '../StarRating/StarRating';
 
 const FicheLogement = ({
   title,
@@ -33,11 +34,13 @@ const FicheLogement = ({
           ))}
         </div>
         <div className="rating">
-          <span>{rating}⭐</span>
+          <span className="stars">{StarRating(rating)}</span>
         </div>
       </div>
-      <DropdownMenu title={'Description'} content={description} />
-      <DropdownMenu title={'Équipements'} content={equipments} />
+      <div className="menu-Logement">
+        <DropdownMenu title={'Description'} content={description} />
+        <DropdownMenu title={'Équipements'} content={equipments} />
+      </div>
     </div>
   );
 };

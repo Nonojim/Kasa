@@ -59,11 +59,13 @@
   width: 50%;
 }
 
-/*.Description,
+.Description,
 .Équipements {
   width: 47%;
-  .dropdown-header {
-    width: 100%;
-    margin: 0;
-  }
-}*/
+}
+
+.menu-Logement {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

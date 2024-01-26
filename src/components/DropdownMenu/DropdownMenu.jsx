@@ -9,11 +9,13 @@ const DropdownMenu = ({title, content}) => {
   };
 
   return (
-    <div className="dropdown-header-origin">
-      <div className={`dropdown-container ${title} ${isDropdownOpen ? 'open' : 'closed'}`}>
+    <div className={`dropdown-header-origin ${title}`}>
+      <div className={`dropdown-container  ${isDropdownOpen ? 'open' : 'closed'}`}>
         <button className="link" onClick={toggleDropdown}>
           <span>{title}</span>
-          <div className={`arrow ${isDropdownOpen ? 'open' : 'close'}`}>&#9650;</div>
+          <div className={`arrow ${isDropdownOpen ? 'open' : 'close'}`}>
+            <span className="material-symbols-outlined">arrow_back_ios</span>
+          </div>
         </button>
         <div className="dropdown-menu">
           <p className={`dropdown-content`}>{content}</p>
