@@ -13,6 +13,7 @@ const FicheLogement = ({
   host,
   rating,
 }) => {
+  console.log('rating = ', rating);
   return (
     <div className="logementMain">
       <div className="SliderWrapper">
@@ -31,7 +32,7 @@ const FicheLogement = ({
       </div>
       <div className="ratings-host">
         <div className="rating">
-          <span className="stars">{StarRating(rating)}</span>
+          <span className="stars">{StarRating((rating = {rating}))}</span>
         </div>
         <div className="host">
           {host.name} <img className="host-picture" src={host.picture} />
