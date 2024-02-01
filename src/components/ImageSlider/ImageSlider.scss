@@ -48,6 +48,9 @@
 .img-slider-btn > * {
   font-size: 80px;
   color: white;
+  @media (max-width: 650px) {
+    font-size: 19px;
+  }
 }
 
 .img-slider-btn:hover > *,
@@ -86,6 +89,9 @@
 .img-slider-bottombar-btn > * {
   color: white;
   font-size: 18px;
+  @media (max-width: 650px) {
+    font-size: 9px;
+  }
 }
 
 .img-slider-btn:focus-visible,

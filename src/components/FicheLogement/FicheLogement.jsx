@@ -22,19 +22,19 @@ const FicheLogement = ({
         <h1>{title}</h1>
         <h2>{location}</h2>
       </div>
-      <div className="host">
-        {host.name} <img className="host-picture" src={host.picture} />
+      <div className="tags">
+        {tags.map((tag, index) => (
+          <span className="tag" key={index}>
+            {tag}
+          </span>
+        ))}
       </div>
-      <div className="tags-ratings">
-        <div className="tags">
-          {tags.map((tag, index) => (
-            <span className="tag" key={index}>
-              {tag}
-            </span>
-          ))}
-        </div>
+      <div className="ratings-host">
         <div className="rating">
           <span className="stars">{StarRating(rating)}</span>
+        </div>
+        <div className="host">
+          {host.name} <img className="host-picture" src={host.picture} />
         </div>
       </div>
       <div className="menu-Logement">

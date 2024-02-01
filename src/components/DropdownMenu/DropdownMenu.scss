@@ -51,56 +51,21 @@
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
-  padding: 0;
   background-color: $primary-color;
   border-radius: 10px;
   padding: 10px 20px 10px 10px;
+  @media (max-width: 700px) {
+    font-size: 13px !important;
+  }
 }
 
 .arrow {
+  padding-left: 9px;
   rotate: 90deg;
+  transform-origin: center;
   transition: transform 0.3s ease;
 }
 
 .arrow.open {
-  transform: rotate(-180deg);
+  transform: rotate(-180deg) translateX(3px);
 }
-/*.dropdown-container {
-  margin-top: 25px;
-}
-
-.dropdown-header {
-  position: relative;
-  z-index: 1;
-  border-radius: 5px;
-  font-size: 18px;
-}
-
-.dropdown-content {
-  &.open {
-    animation: growDown 300ms ease-in-out forwards;
-    display: block;
-    opacity: 1;
-  }
-  &.closed {
-    animation: growUp 300ms ease-in-out forwards;
-    transform-origin: top center;
-  }
-}
-
-@keyframes growUp {
-  0% {
-    opacity: 1;
-    transform: scaleY(1);
-    display: block;
-  }
-  80% {
-    transform: scaleY(1.1);
-  }
-  100% {
-    opacity: 0;
-    transform: scaleY(0);
-    display: none;
-  }
-}
-*/

@@ -3,6 +3,9 @@
   flex-wrap: wrap;
   gap: 50px;
   justify-content: center;
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 }
 
 .gallery > * {

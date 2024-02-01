@@ -1,19 +1,20 @@
 @import '../../utils/style/variables';
 
-.ErrorMain_ h1 {
+.ErrorMain h1 {
   color: $primary-color;
   margin-top: 10%;
   margin-bottom: 10%;
 }
 
-.ErrorMainy {
+.ErrorMain {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.ErrorMain_ a {
+.ErrorMain a {
   margin-bottom: 10%;
   text-decoration: underline;
+  font-size: 18px;
 }
