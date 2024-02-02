@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes} from 'react-router-dom';
 import {createRoot} from 'react-dom/client';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -10,10 +10,10 @@ const root = createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <Router>
+    <BrowserRouter>
       <Header />
       <AppRouter />
       <Footer />
-    </Router>
+    </BrowserRouter>
   </React.StrictMode>
 );
