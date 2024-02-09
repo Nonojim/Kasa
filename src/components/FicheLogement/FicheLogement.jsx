@@ -39,8 +39,13 @@ const FicheLogement = ({
         </div>
       </div>
       <div className="menu-Logement">
-        <DropdownMenu title={'Description'} content={description} />
-        <DropdownMenu title={'Équipements'} content={equipments} />
+        <DropdownMenu title={'Description'} content={<span>{description}</span>} />
+        <DropdownMenu
+          title={'Équipements'}
+          content={equipments.map((equipment, index) => (
+            <span key={index}>{equipment}</span>
+          ))}
+        />
       </div>
     </div>
   );

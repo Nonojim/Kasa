@@ -2,7 +2,7 @@ import {NavLink} from 'react-router-dom';
 import styled, {keyframes} from 'styled-components';
 
 export const StyledNavLink = styled(NavLink)`
-  color: #ff6060;
+  color: black;
   text-decoration: none;
   font-size: 1.34em;
   text-align: center;

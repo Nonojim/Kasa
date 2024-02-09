@@ -12,7 +12,6 @@ const AppRouter = () => {
       <Route path="/Apropos" element={<Apropos />} />
       <Route path="/Logements/:id" element={<Logements />} />
       <Route path="*" element={<Error />} />
-      <Route path="/404" element={<Error />} />
     </Routes>
   );
 };
