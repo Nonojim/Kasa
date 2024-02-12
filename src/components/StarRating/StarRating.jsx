@@ -3,7 +3,7 @@ import {faStar} from '@fortawesome/free-solid-svg-icons';
 import './StarRating.scss';
 
 export function StarRating({rating}) {
-  const filledStars = Math.floor(parseInt(rating, 10));
+  const filledStars = Math.round(parseInt(rating, 10));
 
   const stars = [];
   for (let i = 0; i < 5; i++) {
