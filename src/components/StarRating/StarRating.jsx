@@ -4,7 +4,6 @@ import './StarRating.scss';
 
 export function StarRating({rating}) {
   const filledStars = Math.floor(parseInt(rating, 10));
-  console.log('filledstars = ', filledStars);
 
   const stars = [];
   for (let i = 0; i < 5; i++) {

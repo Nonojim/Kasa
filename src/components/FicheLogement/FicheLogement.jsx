@@ -13,7 +13,6 @@ const FicheLogement = ({
   host,
   rating,
 }) => {
-  console.log('rating = ', rating);
   return (
     <div className="logementMain">
       <div className="SliderWrapper">

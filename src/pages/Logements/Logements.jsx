@@ -8,7 +8,6 @@ const Logements = () => {
   const {id} = useParams();
   const {value, loading, error} = useFetch('/data/logements.json', {}, []); //remplacer par adresse API
   const logementList = value;
-  console.log(logementList);
 
   return error ? (
     <span>Un problème est survenu</span>
