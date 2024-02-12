@@ -18,6 +18,9 @@ export default function ImageSlider({imageUrls}) {
     });
   }
 
+  //test fix singleimage
+  const isSingleImage = imageUrls.length <= 1;
+
   return (
     <div className="img-slider">
       <div className="img-slider-imgcontainer">
@@ -30,27 +33,33 @@ export default function ImageSlider({imageUrls}) {
           />
         ))}
       </div>
-      <button onClick={showPrevImage} className="img-slider-btn" style={{left: 0}}>
-        <span className="material-symbols-outlined">arrow_back_ios</span>
-      </button>
-      <button onClick={showNextImage} className="img-slider-btn" style={{right: 0}}>
-        <span className="material-symbols-outlined">arrow_forward_ios</span>
-      </button>
-      <div className="img-slider-bottombar">
-        {imageUrls.map((_, index) => (
-          <button
-            key={index}
-            className="img-slider-bottombar-btn"
-            onClick={() => setImageIndex(index)}
-          >
-            {index === imageIndex ? (
-              <span className="material-symbols-outlined">adjust</span>
-            ) : (
-              <span className="material-symbols-outlined">circle</span>
-            )}
+      {!isSingleImage && (
+        <>
+          <button onClick={showPrevImage} className="img-slider-btn" style={{left: 0}}>
+            <span className="material-symbols-outlined">arrow_back_ios</span>
           </button>
-        ))}
-      </div>
+          <button onClick={showNextImage} className="img-slider-btn" style={{right: 0}}>
+            <span className="material-symbols-outlined">arrow_forward_ios</span>
+          </button>
+        </>
+      )}
+      {!isSingleImage && (
+        <div className="img-slider-bottombar">
+          {imageUrls.map((_, index) => (
+            <button
+              key={index}
+              className="img-slider-bottombar-btn"
+              onClick={() => setImageIndex(index)}
+            >
+              {index === imageIndex ? (
+                <span className="material-symbols-outlined">adjust</span>
+              ) : (
+                <span className="material-symbols-outlined">circle</span>
+              )}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
