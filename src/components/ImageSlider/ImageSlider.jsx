@@ -18,7 +18,6 @@ export default function ImageSlider({imageUrls}) {
     });
   }
 
-  //test fix singleimage
   const isSingleImage = imageUrls.length <= 1;
 
   return (
